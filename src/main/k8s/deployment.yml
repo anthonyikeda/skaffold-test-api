@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: skaffold-example-api
+  labels:
+    app: skaffold-example-api
+spec:
+  selector:
+    matchLabels:
+      app: skaffold-example-api
+  template:
+    metadata:
+      labels:
+        app: skaffold-example-api
+    spec:
+      containers:
+        - name: skaffold-example-api
+          image: skaffold-example-api:0.0.1-SNAPSHOT
+          imagePullPolicy: Never
+          env:
+            - name: INFO_APP_VERSION
+              value: 1.0.0-SNAPSHOT
+            - name: INFO_APP_AUTHOR
+              value: "Anthony Ikeda"
+
