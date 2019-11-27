@@ -1,0 +1,11 @@
+= Skaffold Demo Project
+Anthony Ikeda <anthony.ikeda@gmail.com>
+v1.0
+
+:toc: left
+
+== Resources
+
+* https://skaffold.dev/docs/workflows/getting-started-with-your-project/[Skaffold]
+* https://98elements.com/blog/automatic-versioning-of-java-applications-using-git-version-gradle-plugin/amp/[Git Version]
+* https://github.com/GoogleContainerTools/skaffold/blob/master/examples/jib/skaffold.yaml[Git Project for JIB]
