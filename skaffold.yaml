@@ -1,0 +1,13 @@
+apiVersion: skaffold/v1
+kind: Config
+metadata:
+  name: skaffold-test-api
+build:
+  artifacts:
+  - image: skaffold-example-api
+    jib: {}
+deploy:
+  kubectl:
+    manifests:
+    - src/main/k8s/deployment.yml
+    - src/main/k8s/service.yml

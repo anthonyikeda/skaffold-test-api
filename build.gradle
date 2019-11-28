@@ -2,7 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.2.1.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java'
-    id "com.google.cloud.tools.jib" version "1.7.0"
+    id "com.google.cloud.tools.jib" version "1.8.0"
 }
 
 group = 'com.example'
@@ -25,7 +25,15 @@ test {
     useJUnitPlatform()
 }
 
-jib.to.image="skaffold-example-api"
-jib.to.tags = [project.version] as HashSet
-jib.from.image="openjdk:11"
-jib.container.creationTime="USE_CURRENT_TIMESTAMP"
+jib {
+    from {
+        image = "openjdk:11.0.5-jre-slim-buster"
+    }
+    to {
+        image = 'anthonyikeda/skaffold-example-api'
+        tags = [project.version]
+    }
+    container {
+        creationTime = "USE_CURRENT_TIMESTAMP"
+    }
+}

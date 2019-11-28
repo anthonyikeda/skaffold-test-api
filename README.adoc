@@ -9,3 +9,15 @@ v1.0
 * https://skaffold.dev/docs/workflows/getting-started-with-your-project/[Skaffold]
 * https://98elements.com/blog/automatic-versioning-of-java-applications-using-git-version-gradle-plugin/amp/[Git Version]
 * https://github.com/GoogleContainerTools/skaffold/blob/master/examples/jib/skaffold.yaml[Git Project for JIB]
+
+== Running Skaffold
+
+It's been a long journey, however, here is how you run skaffold:
+
+[source,bash]
+----
+$ skaffold dev --default-repo docker.io/<repository>
+----
+
+Without the `--default-repo` flag you will find that jib does not look up the correct credentials.
+

@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
         - name: skaffold-example-api
-          image: skaffold-example-api:0.0.1-SNAPSHOT
-          imagePullPolicy: Never
+          image: anthonyikeda/skaffold-example-api:0.0.1-SNAPSHOT
+          imagePullPolicy: Always
           env:
             - name: INFO_APP_VERSION
               value: 1.0.0-SNAPSHOT
