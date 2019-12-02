@@ -22,4 +22,5 @@ spec:
               value: 1.0.0-SNAPSHOT
             - name: INFO_APP_AUTHOR
               value: "Anthony Ikeda"
-
+            - name: INFO_APP_CITY
+              value: Australia
